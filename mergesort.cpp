@@ -43,7 +43,7 @@ Merge(a,low,high,mid);
 }
 }
 int main()
-{int n,i,arr[n];
+{int n,i,arr[n],m,l;
 cout<<"\nEnter the number of elements in the array : "<<endl;
 cin>>n;
 cout<<"Enter the elements in the array : "<<endl;
@@ -54,5 +54,16 @@ MergeSort(arr,0,n-1);
 cout<<"Merge Sorted Array : "<<endl;
 for(i=0;i<n;i++)
 cout<<arr[i]<<"\t";
+cout<<endl;
+if(n%2==1)
+{m=n/2;
+cout<<" The median element in the given array is : "<<arr[m]<<endl;
+}
+else
+{
+m=(n-1)/2;
+l=n/2;
+cout<<" The median element in the given array is : "<<arr[m]<<"\t"<<arr[l]<<endl;
+}
 return 0;
 }
